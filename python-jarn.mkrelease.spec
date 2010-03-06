@@ -3,11 +3,12 @@
 Summary:	Python egg releaser
 Name:		python-%{oname}
 Version:	3.0.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	BSD
 Group:		Development/Other
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0:	%{oname}-%{version}.tar.xz
+Patch0:		jarn.mkrelease-3.0.1-drop-non-existent-dependencies.patch
 URL:		http://pypi.python.org/pypi/jarn.mkrelease/
 BuildArch:	noarch
 
@@ -17,6 +18,7 @@ out of building and distributing Python eggs.
 
 %prep
 %setup -q -n %{oname}-%{version}
+%patch0 -p1 -b .bogusdeps~
 
 %build
 python setup.py build

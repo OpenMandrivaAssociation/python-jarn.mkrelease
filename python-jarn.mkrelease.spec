@@ -11,6 +11,7 @@ Source0:	%{oname}-%{version}.tar.xz
 Patch0:		jarn.mkrelease-3.0.1-drop-non-existent-dependencies.patch
 URL:		http://pypi.python.org/pypi/jarn.mkrelease/
 BuildArch:	noarch
+Requires:	python-setuptools
 
 %description
 mkrelease is a no-frills Python egg releaser. It was created to take the cumber

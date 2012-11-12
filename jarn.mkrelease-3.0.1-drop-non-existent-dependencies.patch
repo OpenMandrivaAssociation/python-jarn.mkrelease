@@ -1,0 +1,11 @@
+--- jarn.mkrelease-3.0.1/setup.py~	2010-01-16 09:26:20.000000000 +0100
++++ jarn.mkrelease-3.0.1/setup.py	2010-03-06 06:17:12.167583834 +0100
+@@ -27,8 +27,6 @@ setup(name='jarn.mkrelease',
+       test_suite='jarn.mkrelease.tests',
+       install_requires=[
+           'setuptools',
+-          'setuptools_hg',
+-          'setuptools_git',
+       ],
+       entry_points = {
+           'console_scripts': 'mkrelease=jarn.mkrelease.mkrelease:main',
